@@ -1,11 +1,15 @@
 body {
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 
-.current-poll-card {
+#current-poll-card {
     width: 50%;
     margin: 0 auto;
+    border: 2px solid #555555;
+    background-color: #aaaaaa;
+    padding: 75px;
 }
 
 .option {
@@ -13,16 +17,25 @@ body {
     font-size: 30px;
     width: 30%;
     margin: 0 auto;
+    border-radius: 1%;
 }
 
 #option-a {
     background-color: #459fff;
-    border-radius: 0.5%;
+    border-radius: 1%;
     border: 2px solid #257fcc;
 }
 
 #option-b {
     background-color: #ff4f85;
-    border-radius: 0.5%;
+    border-radius: 1%;
     border: 2px solid #cc3f75;
+}
+
+#option-a:hover {
+    background-color: #257fcc;
+}
+
+#option-b:hover {
+    background-color: #cc3f75;
 }
