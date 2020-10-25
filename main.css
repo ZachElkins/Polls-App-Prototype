@@ -1,0 +1,28 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.current-poll-card {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.option {
+    text-align: center;
+    font-size: 30px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#option-a {
+    background-color: #459fff;
+    border-radius: 0.5%;
+    border: 2px solid #257fcc;
+}
+
+#option-b {
+    background-color: #ff4f85;
+    border-radius: 0.5%;
+    border: 2px solid #cc3f75;
+}
