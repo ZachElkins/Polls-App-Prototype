@@ -32,6 +32,10 @@ class Poll {
             op.click(function() {
                 currentPoll.data[i]++;
                 currentPoll.showOptions( true );
+                var children = $("#current-options-container").children();
+                for( var child of children ) {
+                    child.disabled = true;
+                }
                 updateDB( this.id );
             });
             
