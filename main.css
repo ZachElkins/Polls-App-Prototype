@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
 body {
     width: 100%;
     margin: 0 auto;
@@ -5,56 +7,93 @@ body {
     background-color: #cccccc;
 }
 
-#current-poll-card {
-    width: 50%;
+h1 {
+    font-family: 'impact';
+    font-size: 60px;
+}
+
+.container {
+    justify-content: center;
+} 
+
+.options-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
     margin: 0 auto;
-    border: 2px solid #555555;
-    background-color: #aaaaaa;
-    padding: 75px;
 }
 
 .option {
+    font-family: 'Noto Sans JP', sans-serif;
     text-align: center;
     font-size: 30px;
-    width: 30%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 1%;
     margin-top: 10px;
-    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-#option-a {
-    background-color: #459fff;
-    border-radius: 1%;
-    border: 2px solid #257fcc;
+.option {
+    background-color: #8cbaeb;
+    border: 2px solid #6896be;
+    border-radius: 10px;
+    transition: all ease 0.25s;
+    color: #3a3e41;
 }
 
-#option-b {
-    background-color: #ff4f85;
-    border-radius: 1%;
-    border: 2px solid #cc3f75;
-}
-
-#option-a:hover {
-    background-color: #257fcc;
-}
-
-#option-b:hover {
-    background-color: #cc3f75;
+.option:hover {
+    background-color: #6896be;
 }
 
 .button {
+    font-family: 'impact';
     text-align: center;
+    width: 40%;
     margin: auto;
     margin-top: 50px;
-    font-size: 25px;
-    padding: 10px;
-    border: 2px solid #c5c5c5;
-    background-color: #cfcfcf;
+    font-size: 35px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    transition: all ease 0.25s;
+    color: #3a3e41;
 }
 
 .button:hover {
-    background-color: #c5c5c5;
+    background-color: #e5e5e5;
+}
+
+#add-poll {
+	display: block;
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+#return-to-polls {
+	display: block;
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+#question-input {
+    font-family: 'impact';
+    font-size: 60px;
+    background: none;
+    text-align: center;
+    border: none;
+
+    margin-bottom: 30px;
 }
 
 #create-a-poll {
@@ -63,5 +102,5 @@ body {
     border: 2px solid #555555;
     background-color: #aaaaaa;
     padding: 75px;
-    margin-top: 10px;;
+    margin-top: 10px;
 }

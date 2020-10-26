@@ -1,13 +1,40 @@
 class Poll {
-    constructor( question, optionA, optionB ) {
+    constructor( question, options, newPoll=false ) {
         this.q = question;
-        this.options = [ optionA, optionB ];
-        this.data = [ 0, 0 ];
+        this.options = options;
+        this.data = [];
+        for( let option of options ) {
+            this.data.push( 0 );
+        }
+
+        this.id = sha256(this.q);
+
+        if( newPoll ) {
+            storeData( this );
+        }
     }
 
-    show() {
+    showOptions( showData ) {
         $("#title").html(this.q);
-        $("#option-a").val(this.options[0]);
-        $("#option-b").val(this.options[1]);
+
+        $("#current-options-container").html("");
+
+        for( let i = 0; i < this.options.length; i ++ ) {
+            var id = "option-"+i;
+            var val = this.options[i];
+            if( showData ) {
+                val += " | " + this.data[i];
+            }
+            var op = $('<input type="button" class="'+id+' option" id="'+id+'" value="'+ val +'"  />')
+
+            $("#current-options-container").append( op );
+
+            op.click(function() {
+                currentPoll.data[i]++;
+                currentPoll.showOptions( true );
+                updateDB( this.id );
+            });
+            
+        }
     }
 }

@@ -18,37 +18,32 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="sha256.js"></script>
     <script src="storage.js"></script>
     <script src="poll.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Polls</h1>
-    <div id="container">
-        <div id="current-poll-card">
-    
-            <h2 id="title">Current Poll</h2>
-            <input type="button" id="option-a" class="option" value="option a" />
-            <br>
-            <input type="button" id="option-b" class="option" value="option b" />
-            <br>
-            <input type="button" id="new-poll" class="button" value="Next" />
+
+    <div id="polls" class="container">
+        <input type="button" class="button" id="add-poll" value="+" />
+        <h1 id="title">Current Poll</h1>
+
+        <div class="options-container" id="current-options-container">
         </div>
 
-        <div id="create-a-poll">
-            <h2>Create a Poll</h2>
-
-            <label for="new-title">Title</label>
-            <input id="new-title" type="text" />
-            <br>
-            <label for="new-option-a">Option A</label>
-            <input id="new-option-a" type="text" />
-            <br>
-            <label for="new-option-b">Option B</label>
-            <input id="new-option-b" type="text" />
-            <br>
-            <input type="button" class="button" id="submit-poll" value="Submit Poll" />
+        <input type="button" id="next-poll" class="button" value="Next" />
+    </div>
+        
+    <div id="new-poll" class="container">
+        <input type="button" class="button" id="return-to-polls" value="Polls" />
+        <input type="text" id="question-input" value="New Question" />
+        
+        <div class="options-container" id="new-options-container">
         </div>
+        <input type="button" id="add-option" class="button" value="Add Option" />
+        <br>
+        <input type="button" id="submit-poll" class="button" value="Submit Poll" />
     </div>
 
 </body>
