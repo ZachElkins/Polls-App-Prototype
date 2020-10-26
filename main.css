@@ -2,6 +2,7 @@ body {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    background-color: #cccccc;
 }
 
 #current-poll-card {
@@ -18,6 +19,8 @@ body {
     width: 30%;
     margin: 0 auto;
     border-radius: 1%;
+    margin-top: 10px;
+    padding: 10px;
 }
 
 #option-a {
@@ -38,4 +41,27 @@ body {
 
 #option-b:hover {
     background-color: #cc3f75;
+}
+
+.button {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid #c5c5c5;
+    background-color: #cfcfcf;
+}
+
+.button:hover {
+    background-color: #c5c5c5;
+}
+
+#create-a-poll {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #555555;
+    background-color: #aaaaaa;
+    padding: 75px;
+    margin-top: 10px;;
 }
